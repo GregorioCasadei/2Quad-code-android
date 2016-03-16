@@ -1,0 +1,245 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#313131">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_joystick"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:background="@drawable/image_button_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+    </RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:layout_above="@+id/textView33"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:layout_above="@+id/textView44"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:textColor="#444444"
+            android:textSize="20dp"
+            android:layout_above="@+id/textView66"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_joystick1"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:background="@drawable/image_button_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="LOG: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LOGtxtView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ACACAC"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direction"
+        android:textColor="#444444"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/YawDX"
+        android:layout_alignEnd="@+id/YawDX"
+        android:layout_marginRight="53dp"
+        android:layout_marginEnd="53dp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/YawSX"
+        android:text="YawSx"
+        android:layout_toRightOf="@+id/layout_joystick1"
+        android:layout_below="@+id/linearLayout2"
+        android:textColor="#ACACAC"
+        android:background="@drawable/button_border_color"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btScan"
+        android:text="Bluetooth scan"
+        android:textColor="#ACACAC"
+        android:background="@drawable/button_border_color"
+        android:layout_above="@+id/textSpeed"
+        android:layout_alignRight="@+id/YawDX"
+        android:layout_alignEnd="@+id/YawDX" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/YawDX"
+        android:layout_alignTop="@+id/YawSX"
+        android:layout_toLeftOf="@+id/layout_joystick"
+        android:layout_toStartOf="@+id/layout_joystick"
+        android:text="YawDx"
+        android:textColor="#ACACAC"
+        android:background="@drawable/button_border_color"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:text="Send: "
+                android:layout_width="285dp"
+                android:layout_height="122dp"
+                android:id="@+id/SendText"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/layout_joystick1"
+                android:textColor="#ACACAC"/>
+
+        </LinearLayout>
+
+
+    <TextView
+        android:text="Speed: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textSpeed"
+        android:layout_alignBottom="@+id/layout_joystick1"
+        android:layout_alignLeft="@+id/YawSX"
+        android:layout_alignStart="@+id/YawSX"
+        android:textColor="#ACACAC"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Switch_Off"
+        android:text="Switch Off"
+        android:layout_alignTop="@+id/YawSX"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ACACAC"
+        android:background="@drawable/button_border_color"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Direction"
+        android:textColor="#444444"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/layout_joystick"
+        android:layout_alignLeft="@+id/YawDX"
+        android:layout_alignStart="@+id/YawDX"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:text="Recived: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtReceved"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/layout_joystick"
+        android:layout_alignRight="@+id/layout_joystick"
+        android:layout_alignEnd="@+id/layout_joystick"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:autoText="false"
+        android:textColor="#ACACAC"/>
+
+
+</RelativeLayout>
